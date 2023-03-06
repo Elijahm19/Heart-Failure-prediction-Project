@@ -27,27 +27,27 @@ The dataset that we are using was found on Kaggle and was originally created usi
 
 As for the descriptive features: 
 
-The age feature gives the ages of the patients.  
+- The age feature gives the ages of the patients.  
 
-The sex feature represents the gender of the patients. 
+- The sex feature represents the gender of the patients. 
 
-The ChestPainType feature gives the type of chest pain, which can be TA meaning Typical Angina, ATA meaning Atypical Angina, NAP meaning Non-Anginal Pain, or ASY meaning Asymptomatic. Angina is defined as a “type of chest pain caused by reduced blood flow to the heart” [4]. Typical angina is usually preceded by physical exertion or stress and is relieved with rest or medication. Atypical angina is described as having symptoms that are ascribed to angina but don’t fall under the category of typical angina [5]. Non-Anginal Pain refers to pain in the chest area that is not related to the heart [6]. Asymptomatic is when there are no symptoms being shown. 
+- The ChestPainType feature gives the type of chest pain, which can be TA meaning Typical Angina, ATA meaning Atypical Angina, NAP meaning Non-Anginal Pain, or ASY meaning Asymptomatic. Angina is defined as a “type of chest pain caused by reduced blood flow to the heart” [4]. Typical angina is usually preceded by physical exertion or stress and is relieved with rest or medication. Atypical angina is described as having symptoms that are ascribed to angina but don’t fall under the category of typical angina [5]. Non-Anginal Pain refers to pain in the chest area that is not related to the heart [6]. Asymptomatic is when there are no symptoms being shown. 
 
-Resting BP stands for resting blood pressure which is the blood pressure when your heart is at rest. It is measured by millimeters (mm) of mercury (Hg).   
+- Resting BP stands for resting blood pressure which is the blood pressure when your heart is at rest. It is measured by millimeters (mm) of mercury (Hg).   
 
-Cholesterol gives the serum cholesterol level which is the amount of total cholesterol in your blood [7]. It is measured by milligrams (mg) of cholesterol per deciliter (dL) of blood (mm/dl).  
+- Cholesterol gives the serum cholesterol level which is the amount of total cholesterol in your blood [7]. It is measured by milligrams (mg) of cholesterol per deciliter (dL) of blood (mm/dl).  
 
-Fasting BS is fasting blood sugar which is your blood sugar level after an overnight period of no eating [8].  
+- Fasting BS is fasting blood sugar which is your blood sugar level after an overnight period of no eating [8].  
 
-Resting ECG is resting electrocardiogram results which can be Normal, LVH, or ST. Resting ECG is a test that can help detect heart abnormalities like arrhythmia and show evidence of heart disease and left ventricular hypertrophy (LVH) [9]. ST refers to ST-T wave abnormality which is when there is an elevation or depression of the region between the ventricular end of depolarization and the beginning of repolarization and/or T wave inversions [10]. This can be indicative of myocardial ischemia or myocardial injury which are conditions related to the heart [10]. Resting ECG measured in millivolts (mV). 
+- Resting ECG is resting electrocardiogram results which can be Normal, LVH, or ST. Resting ECG is a test that can help detect heart abnormalities like arrhythmia and show evidence of heart disease and left ventricular hypertrophy (LVH) [9]. ST refers to ST-T wave abnormality which is when there is an elevation or depression of the region between the ventricular end of depolarization and the beginning of repolarization and/or T wave inversions [10]. This can be indicative of myocardial ischemia or myocardial injury which are conditions related to the heart [10]. Resting ECG measured in millivolts (mV). 
 
-MaxHR is the maximum heart rate achieved.  
+- MaxHR is the maximum heart rate achieved.  
 
-ExerciseAngina refers to whether angina (see feature 3 above) was induced by exercise or not.  
+- ExerciseAngina refers to whether angina (see feature 3 above) was induced by exercise or not.  
 
-Oldpeak is the measure of ST depression induced by exercise relative to rest. It is measured based on levels of depression. 
+- Oldpeak is the measure of ST depression induced by exercise relative to rest. It is measured based on levels of depression. 
 
-ST_Slope is the ST segment's slope which measures the segment's shift “relative to exercise-induced increments in heart rate” [11]. It can be up-sloping, flat, or down-sloping. 
+- ST_Slope is the ST segment's slope which measures the segment's shift “relative to exercise-induced increments in heart rate” [11]. It can be up-sloping, flat, or down-sloping. 
 
 With these features and 918 already classified entries, we can use this dataset for predicting heart disease in a patient. 
 
@@ -56,14 +56,11 @@ With these features and 918 already classified entries, we can use this dataset 
 In the dataset, there are 11 attributes and the target class which is ‘heart disease’ is a binary class. The value 1 represents the presence of heart disease while 0 means that the person doesn’t have the disease. In this case, the proposed analytics solution is applying classification machine learning models such as Classifier Decision Trees, Logistic Regression, mutual information, and K-Nearest Neighbor (KNN).  
  
  
-
 2 Data Exploration and Preprocessing 
 
 2.1 Data Quality Report 
 
 The data quality report shows that there are no missing values in any of the data features.  
-
- 
 
 Table 1. Data Quality Report for Categorical Features 
 
