@@ -67,7 +67,8 @@ The data quality report shows that there are no missing values in any of the dat
 
 Table 1. Data Quality Report for Categorical Features 
 
- 
+![image](https://user-images.githubusercontent.com/47839751/223220806-711984f4-92b3-4dce-bb1f-1bb5bcf46c6f.png)
+
 
 There are seven categorical data features; six are descriptive features and one is the target variable.  
 
@@ -85,6 +86,10 @@ The ST-Slope feature has a cardinality of three: up, flat, and down. Half of the
 
 Finally, HeartDisease, which is the target feature, is a Boolean with a cardinality of two. 44.6% of the patients have heart disease. 
 
+Table 2. Data Quality Report for Continuous Features
+
+![image](https://user-images.githubusercontent.com/47839751/223220922-b3ddf959-3bc0-44d3-9cbb-ec869c49ca9f.png)
+
 The remaining descriptive features are continuous ones.  
 
 Age shows the age of the patient, and the values range from 28 to 77, with a mean of 53.5. 
@@ -99,16 +104,32 @@ Oldpeak has a minimum of -2.6 and a maximum of 6.2 with a 1.07 standard deviatio
 
 Analyzing Bar Charts for Categorical Features 
 
+Figure 1A. Bar Plots of Categorical Features
+
+![image](https://user-images.githubusercontent.com/47839751/223221233-de8b4d88-ddcb-45c4-8eff-b47e445f5708.png)
+
 The bar plot for the Sex feature shows that the number of males is almost four times the number of females in the dataset. The ASY (Asymptomatic) chest pain type is the most prevalent type of chest pain at almost 400 instances, while TA (Typical Angina) scores the lowest at a level lower than 100. The number of instances where fasting blood pressure is less than or equal to 120 mg/dl is 3.5 times more than the number of instances where fasting blood pressure is greater than 120 mg/dl.  
 
+Figure 1B. Bar Plots of Categorical Features
 
+![image](https://user-images.githubusercontent.com/47839751/223221329-d700c94c-b2e3-409f-9e96-7f7a28e278cf.png)
  
 Additionally, the number of instances with Normal resting ECG is larger than the number of instances of LVH (which shows probable or definite left ventricular hypertrophy by Estes’ criteria) and ST (which shows the patient is having wave abnormality with elevation or depression of more than 0.05 mV). This means that there might be people with heart disease that have normal resting ECG. As for ExerciseAngina, the number of cases with “No” Exercise Angina is around 375, which is higher than the number of cases of Exercise Angina. Instances with flat ST_Slope (zero slope) are the largest number of instances compared to upward or downward slopes. Finally, the number of instances of heart disease is slightly higher than instances of no heart disease with a difference of 100 instances.  
 
+
+Analyzing Histograms for Continuous Features
+
+Figure 2. Histograms of Continuous Features
+
+![image](https://user-images.githubusercontent.com/47839751/223221599-d1434ed6-6dec-4c36-84ef-0add572ae0ed.png)
  
 The histogram of the Age feature shows a unimodal normal distribution. On the other hand, RestingBP follows a unimodal right-skewed distribution, which will require normalization before applying any machine learning model. Also, 350 instances fall around 125 mm/Hg RestingBP. As for the Cholesterol feature, there are 175 instances with 0 to 50 mm/dl cholesterol levels which shows the presence of outliers in the feature. The rest of the data has a right-skewed unimodal distribution with up to 600 mm/dl cholesterol levels, reflecting large outlier values. For the MaxHR feature, it follows a multimodal distribution with two peaks at 120 and 140, with 120 instances at each peak. The Oldpeak feature follows a unimodal right-skewed distribution with the highest concentration being at 0.  
 
 Analyzing Box Plots for Continuous Features 
+
+Figure 3. Box Plots of Continuous Features
+
+![image](https://user-images.githubusercontent.com/47839751/223221732-531b371e-2946-4b1f-bc20-1d21c1ddd443.png)
 
 
 The box plots for the continuous data features show that there are outliers for all continuous features except Age. It is an indication that we need to handle the outliers before applying any machine learning models. RestingBP has an outlier at zero and upper outliers with values greater than 175 mm/Hg. The rest of the values are right skewed towards 125 mm/Hg. The boxplot of the Cholesterol feature shows outliers at both limits, zero at the lower limit, and values above 400 mm/dl at the upper limit. MaxHR has outliers at the bottom limit with two instances having values less than 67. Finally, the boxplot of Oldpeak has outliers at both limits, one being a value less than –2.5 and seven being greater than 3.8.  
@@ -124,6 +145,10 @@ We used range normalization on all the continuous descriptive features so that t
 2.4 Transformations 
 
 Most machine learning models require transforming categorical features and encoding them into numbers. Therefore, one-hot encoding is applied using the get_dummies function. This was done to ensure maximum data quality, which is imperative for gaining accurate analysis. 
+
+Figure 4. One Hot Encoding Sample
+
+![image](https://user-images.githubusercontent.com/47839751/223221879-d3d5d841-e845-4934-afe5-2f2e6d252c3a.png)
 
 
 2.5 Feature Selection 
