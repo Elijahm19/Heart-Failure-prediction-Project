@@ -1,4 +1,4 @@
-# Heart_Failure_prediction_Project
+# Heart-Failure prediction Project
 
 Georgia State University 
 CSC4780/6780&DSCI4780 – Fundamentals of Data Science  
